@@ -29,6 +29,10 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
+    'widget_tweaks',
+]
+
+INSTALLED_APPS += [
     'usuarios',
     'porteiros',
     'visitantes',
@@ -49,7 +53,7 @@ ROOT_URLCONF = 'controle_visitantes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'react/build')],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -114,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'react/build/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
