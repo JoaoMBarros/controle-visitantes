@@ -42,6 +42,14 @@ class Visitante(models.Model):
         null=True,
     )
 
+    placa_veiculo_foto = models.ImageField(
+        verbose_name="Foto da placa do veículo",
+        upload_to="uploads/",
+        max_length=500,
+        null=True,
+        blank=True,
+    )
+
     horario_chegada = models.DateTimeField(
         verbose_name="Horário de chegada",
         auto_now_add=True,

@@ -12,7 +12,7 @@ def registrar_visitante(request):
     form = VisitanteForm()
 
     if request.method == "POST":
-        form = VisitanteForm(request.POST)
+        form = VisitanteForm(request.POST, request.FILES)
 
         if form.is_valid():
             # Salva os dados do formulário no banco de dados, mas não faz o commit
